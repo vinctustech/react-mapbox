@@ -1,0 +1,56 @@
+{
+  "name": "@vinctus/react-mapbox",
+  "version": "0.1.0-beta.4",
+  "description": "Minimalist Mapbox GL React.js wrapper library",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "/dist"
+  ],
+  "exports": {
+    ".": "./dist/index.js",
+    "./dist/*": "./dist/*.js"
+  },
+  "dependencies": {
+    "react-scripts": "5.0.1"
+  },
+  "peerDependencies": {
+    "mapbox-gl": "^2.8.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/mapbox-gl": "^2.7.2",
+    "@types/node": "^16.11.17",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "typescript": "^4.7.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "prepublishOnly": "tsc"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
