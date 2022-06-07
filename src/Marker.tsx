@@ -1,4 +1,4 @@
-import { FC, useEffect, useState, Children, ReactElement } from 'react'
+import { FC, useEffect, useState, Children, ReactElement, ReactNode } from 'react'
 import mapboxgl, { Anchor } from 'mapbox-gl'
 import { useMap } from './Map'
 import ReactDOM from 'react-dom'

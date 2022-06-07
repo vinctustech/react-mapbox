@@ -37,6 +37,7 @@ export const Home: FC = () => {
   const [triangle, setTriangle] = useState(true)
   const [popup, setPopup] = useState(false)
   const [symbol, setSymbol] = useState(true)
+  const [error, setError] = useState(false)
   const map = useRef<mapboxgl.Map>(null)
 
   return (
@@ -58,6 +59,11 @@ export const Home: FC = () => {
                   style={{ width: '100%', height: '400px' }}
                 >
                   <Map
+                    fallback={
+                      <Text size="xl" weight="bold">
+                        This is the error boundary fallback
+                      </Text>
+                    }
                     ref={map}
                     longitude={-73.57529502748406}
                     latitude={45.46566080452946}
@@ -92,6 +98,7 @@ export const Home: FC = () => {
                       }))
                     }}
                   >
+                    {error && {}}
                     <GeolocateControl position="bottom-right" showUserLocation={false} />
                     <ScaleControl position="bottom-right" />
                     {marker && (
@@ -233,6 +240,9 @@ export const Home: FC = () => {
                 </Button>{' '}
                 <Button onClick={() => setSymbol((on) => !on)}>
                   {symbol ? 'no symbol' : 'show symbol'}
+                </Button>{' '}
+                <Button disabled={error} onClick={() => setError((on) => !on)}>
+                  error
                 </Button>
               </Elem>
             </Grid>

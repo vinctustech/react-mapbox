@@ -11,7 +11,7 @@ import React, {
   useMemo,
 } from 'react'
 import mapboxgl, { MapboxEvent } from 'mapbox-gl'
-import ErrorBoundary from './ErrorBoundary' // eslint-disable-line import/no-webpack-loader-syntax
+import { ErrorBoundary } from './ErrorBoundary' // eslint-disable-line import/no-webpack-loader-syntax
 
 export type ViewState = {
   longitude: number

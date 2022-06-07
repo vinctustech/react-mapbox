@@ -9,9 +9,10 @@ interface State {
   hasError: boolean
 }
 
-class ErrorBoundary extends Component<Props, State> {
-  public state: State = {
-    hasError: false,
+export class ErrorBoundary extends Component<Props, State> {
+  constructor(props: any) {
+    super(props)
+    this.state = { hasError: false }
   }
 
   public static getDerivedStateFromError(_: Error): State {
@@ -20,16 +21,12 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Uncaught error:', error, errorInfo)
+    console.error('Uncaught map error:', error, errorInfo)
   }
 
   public render() {
-    if (this.state.hasError) {
-      return this.props.fallback || <h1>Sorry.. there was a map error</h1>
-    }
+    if (this.state.hasError) return this.props.fallback || <h1>Sorry.. there was a map error</h1>
 
     return this.props.children
   }
 }
-
-export default ErrorBoundary
