@@ -1,0 +1,5 @@
+nav:
+  - Developer Guide
+  - guide/installation.md
+  - API Reference
+  - api/map.md
