@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="{{ 'styles/footer.css' | relURL }}">
     <link rel="stylesheet" href="{{ 'styles/friendly.css' | relURL }}">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/8a5bb05f66.js" crossorigin="anonymous"></script>
   </head>
 
@@ -23,14 +28,11 @@
 
       <div class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item"  href="{{ .site.baseURL }}">
-            Home
+          <a class="navbar-item" style="font-family:'Orbitron',sans-serif;font-size:130%"  href="{{ .site.baseURL }}">
+            react-mapbox
           </a>
           <a class="navbar-item"  href="{{ .site.start | relURL }}">
             Documentation
-          </a>
-          <a class="navbar-item"  href="{{ .site.baseURL }}">
-            Themes
           </a>
         </div>
 
@@ -38,7 +40,7 @@
           <div class="navbar-item">
             <div class="field is-grouped">
               <p class="control">
-                <a class="bd-tw-button button" data-social-network="GitHub" data-social-target="https://bulma.io" target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=https://bulma.io&amp;via=jgthms">
+                <a class="bd-tw-button button" target="_blank" href="{{ .site.repoLink }}">
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
@@ -46,7 +48,7 @@
                 </a>
               </p>
               <p class="control">
-                <a class="button is-primary" href="https://github.com/jgthms/bulma/releases/download/0.9.3/bulma-0.9.3.zip">
+                <a class="button is-primary" href="{{ .site.downloadLink }}">
               <span class="icon">
                 <i class="fas fa-download"></i>
               </span>
@@ -65,7 +67,7 @@
     <footer class="footer pt-3 pb-3">
       <div class="content has-text-centered">
         <p>
-          &copy; {{ now.year }} <a href="{{ .site.authorLink }}">{{ .site.author }}</a>. {{ .site.rightsReserved }}
+          &copy; {{ now.year }} <a href="{{ .site.authorLink }}">{{ .site.author }}</a> {{ .site.rightsReserved }}
           {{- if .site.license }}
             The source code is licensed <a href="{{ .site.licenseLink }}">{{ .site.license }}</a>.
           {{- end }}
