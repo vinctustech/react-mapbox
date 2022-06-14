@@ -5,3 +5,6 @@ nav:
   - api/geolocate.md
   - api/layer.md
   - api/map.md
+  - api/marker.md
+  - api/popup.md
+  - api/scale.md
