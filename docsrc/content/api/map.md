@@ -15,42 +15,74 @@ Props
 
 #### `accessToken` string
 
-#### `fallback` ReactNode
+Mapbox access token.
 
-#### `id` string
+#### `fallback` ReactNode *(optional)*
+
+Error boundary fallback. If no fallback is provided, `<h1>Sorry.. there was a map error</h1>` is used instead.
+
+#### `id` string *(optional)*
 
 Map container id.
 
-#### `ref` RefAttributes<mapboxgl.Map | null>
+#### `ref` RefAttributes<mapboxgl.Map | null> *(optional)*
+
+Forwarded ref.
 
 ### Layout
 
-#### `style` CSSProperties
+#### `style` CSSProperties *(optional)*
+
+Default: `{position: 'relative', width: '100%', height: '100%'}`
+
+Map container CSS.
 
 ### Camera Props
 
 #### `longitude` number
 
+Initial map center longitude.
+
 #### `latitude` number
+
+Initial map center longitude.
 
 #### `zoom` number
 
+Initial map zoom.
+
 ### Styling
 
-#### `antialias` boolean (optional)
+#### `antialias` boolean *(optional)*
 
-#### `logoPosition` 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
+Mapbox [Map](https://docs.mapbox.com/mapbox-gl-js/api/map/) `antialias` option.
 
-#### `maxPitch` number
+#### `logoPosition` 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' *(optional)*
 
-#### `mapStyle` string
+Position of the Mapbox wordmark on the map.
+
+#### `maxPitch` number *(optional)*
+
+The pitch is disabled (zero value) by default.
+
+#### `mapStyle` string *(optional)*
+
+The current map style default is `mapbox://styles/mapbox/streets-v11`.
 
 ### Callbacks
 
-#### `onLoad` (e: import('mapbox-gl').MapboxEvent) => void
+#### `onLoad` (e: import('mapbox-gl').MapboxEvent) => void *(optional)*
 
-#### `onDragEnd` (e: ViewStateChangeEvent) => void
+Mapbox `map.on('load',...)` event callback.
 
-#### `onMoveEnd` (e: ViewStateChangeEvent) => void
+#### `onDragEnd` (e: ViewStateChangeEvent) => void *(optional)*
 
-#### `onZoomEnd` (e: ViewStateChangeEvent) => void
+Mapbox `map.on('dragend',...)` event callback.
+
+#### `onMoveEnd` (e: ViewStateChangeEvent) => void *(optional)*
+
+Mapbox `map.on('moveend',...)` event callback.
+
+#### `onZoomEnd` (e: ViewStateChangeEvent) => void *(optional)*
+
+Mapbox `map.on('zoomend',...)` event callback.
