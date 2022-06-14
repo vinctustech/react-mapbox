@@ -9,7 +9,7 @@ import { Map, MapProvider, Marker, GeolocateControl } from '@vinctus/react-mapbo
 
 const accessToken = <Mapbox access token>
 
-const App: FC = () => {
+export const App: FC = () => {
   return (
     <MapProvider>
       <Map
