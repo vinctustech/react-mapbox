@@ -15,7 +15,7 @@ Example
 
 Here's a basic example.
 
-```tsx
+```javascript
 import React, { FC } from 'react'
 import ReactDOM from 'react-dom'
 import 'mapbox-gl/dist/mapbox-gl.css'

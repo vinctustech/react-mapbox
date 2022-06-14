@@ -3,7 +3,7 @@ GeolocateControl
 
 A Component that adds a [GeolocateControl](https://docs.mapbox.com/mapbox-gl-js/api/markers/#geolocatecontrol) to a map.
 
-```tsx
+```javascript
 import React, { FC } from 'react'
 import { Map, MapProvider, Marker, GeolocateControl } from '@vinctus/react-mapbox'
 
