@@ -87,7 +87,7 @@ function addEventHandler(map: mapboxgl.Map, type: string, handler: (e: any) => v
 
 export type MapProps = {
   accessToken: string
-  antialias?: true
+  antialias?: boolean
   children?: ReactNode
   fallback?: ReactNode
   id?: string

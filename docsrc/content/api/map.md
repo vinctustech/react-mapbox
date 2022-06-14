@@ -11,20 +11,46 @@ The *Map* object can be accessed via a [React Ref](https://reactjs.org/docs/refs
 Props
 -----
 
-accessToken: string
-antialias?: true
-children?: ReactNode
-fallback?: ReactNode
-id?: string
-longitude: number
-latitude: number
-logoPosition?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
-maxPitch?: number
-mapStyle?: string
-onLoad?: (e: import('mapbox-gl').MapboxEvent) => void
-onDragEnd?: (e: ViewStateChangeEvent) => void
-onMoveEnd?: (e: ViewStateChangeEvent) => void
-onZoomEnd?: (e: ViewStateChangeEvent) => void
-ref?: RefAttributes<mapboxgl.Map | null>
-style?: CSSProperties
-zoom: number
+### General
+
+#### `accessToken` string
+
+#### `fallback` ReactNode
+
+#### `id` string
+
+Map container id.
+
+#### `ref` RefAttributes<mapboxgl.Map | null>
+
+### Layout
+
+#### `style` CSSProperties
+
+### Camera Props
+
+#### `longitude` number
+
+#### `latitude` number
+
+#### `zoom` number
+
+### Styling
+
+#### `antialias` boolean (optional)
+
+#### `logoPosition` 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
+
+#### `maxPitch` number
+
+#### `mapStyle` string
+
+### Callbacks
+
+#### `onLoad` (e: import('mapbox-gl').MapboxEvent) => void
+
+#### `onDragEnd` (e: ViewStateChangeEvent) => void
+
+#### `onMoveEnd` (e: ViewStateChangeEvent) => void
+
+#### `onZoomEnd` (e: ViewStateChangeEvent) => void
