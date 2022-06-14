@@ -2,4 +2,6 @@ nav:
   - Developer Guide
   - guide/installation.md
   - API Reference
+  - api/geolocate.md
+  - api/layer.md
   - api/map.md
