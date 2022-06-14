@@ -86,23 +86,23 @@ function addEventHandler(map: mapboxgl.Map, type: string, handler: (e: any) => v
 }
 
 export type MapProps = {
-  children?: ReactNode
-  style?: CSSProperties
-  id?: string
   accessToken: string
   antialias?: true
+  children?: ReactNode
+  fallback?: ReactNode
+  id?: string
   longitude: number
   latitude: number
   logoPosition?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
   maxPitch?: number
   mapStyle?: string
-  zoom: number
   onLoad?: (e: import('mapbox-gl').MapboxEvent) => void
   onDragEnd?: (e: ViewStateChangeEvent) => void
   onMoveEnd?: (e: ViewStateChangeEvent) => void
   onZoomEnd?: (e: ViewStateChangeEvent) => void
   ref?: RefAttributes<mapboxgl.Map | null>
-  fallback?: ReactNode
+  style?: CSSProperties
+  zoom: number
 }
 
 export const Map = React.forwardRef<mapboxgl.Map | null, MapProps>(
