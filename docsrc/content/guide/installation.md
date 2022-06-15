@@ -21,7 +21,7 @@ import ReactDOM from 'react-dom'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { Map, MapProvider, Marker } from '@vinctus/react-mapbox'
 
-const accessToken = <Mapbox access token>
+const accessToken = '<Mapbox access token>'
 
 ReactDOM.render(
     <React.StrictMode>

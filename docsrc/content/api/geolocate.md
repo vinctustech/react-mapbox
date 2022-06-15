@@ -7,7 +7,7 @@ A Component that adds a [GeolocateControl](https://docs.mapbox.com/mapbox-gl-js/
 import React, { FC } from 'react'
 import { Map, MapProvider, Marker, GeolocateControl } from '@vinctus/react-mapbox'
 
-const accessToken = <Mapbox access token>
+const accessToken = '<Mapbox access token>'
 
 export const App: FC = () => {
   return (
