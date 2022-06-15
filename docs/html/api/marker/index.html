@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>react-mapbox: A Minimalist Mapbox GL React.js Wrapper Library</title>
+    <link rel="stylesheet" href="/juicer/examples/docsrc/public/styles/bulma.min.css">
+    <link rel="stylesheet" href="/juicer/examples/docsrc/public/styles/footer.css">
+    <link rel="stylesheet" href="/juicer/examples/docsrc/public/styles/friendly.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/8a5bb05f66.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <nav class="navbar is-fixed-top is-light" role="navigation" aria-label="main navigation">
+
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" style="font-family:'Orbitron',sans-serif;font-size:130%"  href="/juicer/examples/docsrc/public">
+            react-mapbox
+          </a>
+          <a class="navbar-item"  href="/juicer/examples/docsrc/public/html/guide/installation">
+            Documentation
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="field is-grouped">
+              <p class="control">
+                <a class="bd-tw-button button" target="_blank" href="https://github.com/vinctustech/react-mapbox">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>GitHub</span>
+                </a>
+              </p>
+              <p class="control">
+                <a class="button is-primary" href="https://github.com/vinctustech/react-mapbox/archive/refs/tags/v0.1.0-beta.5.zip">
+              <span class="icon">
+                <i class="fas fa-download"></i>
+              </span>
+                  <span>Download</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    
+  <section class="section">
+    <div class="columns">
+      <div class="column is-2 is-offset-1">
+        <aside class="menu">
+              <p class="menu-label">
+                Developer Guide
+              </p>
+              <ul class="menu-list">
+                  <li><a href="/juicer/examples/docsrc/public/html/guide/installation">Getting Started</a></li>
+              </ul>
+              <p class="menu-label">
+                API Reference
+              </p>
+              <ul class="menu-list">
+                  <li><a href="/juicer/examples/docsrc/public/html/api/geolocate">GeolocateControl</a></li>
+                  <li><a href="/juicer/examples/docsrc/public/html/api/layer">Layer</a></li>
+                  <li><a href="/juicer/examples/docsrc/public/html/api/map">Map</a></li>
+                  <li><a href="/juicer/examples/docsrc/public/html/api/marker">Marker</a></li>
+                  <li><a href="/juicer/examples/docsrc/public/html/api/popup">Popup</a></li>
+                  <li><a href="/juicer/examples/docsrc/public/html/api/scale">ScaleControl</a></li>
+              </ul>
+        </aside>
+      </div>
+
+      <div class="column is-5">
+        <div class="content has-text-justified">
+          <h1 id="marker">Marker</h1>
+<p>A component that adds a <a href="/juicer/examples/docsrc/public/https:/docs.mapbox.com/mapbox-gl-js/api/markers/#marker">Marker</a> to a map. A simple marker with no child appears as a light blue droplet shaped SVG.  Otherwise, an arbitrary React element child can be used as the marker.</p>
+<pre class="highlight"><code class="language-javascript"><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">&lcub;</span> <span class="nx">FC</span> <span class="p">&rcub;</span> <span class="nx">from</span> <span class="s1">'react'</span>
+<span class="kr">import</span> <span class="p">&lcub;</span> <span class="nx">Map</span><span class="p">,</span> <span class="nx">MapProvider</span><span class="p">,</span> <span class="nx">Marker</span> <span class="p">&rcub;</span> <span class="nx">from</span> <span class="s1">'@vinctus/react-mapbox'</span>
+
+<span class="kr">const</span> <span class="nx">accessToken</span> <span class="o">=</span> <span class="s1">'&lt;Mapbox access token&gt;'</span>
+
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">App</span><span class="o">:</span> <span class="nx">FC</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">&lcub;</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">MapProvider</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Map</span>
+        <span class="nx">style</span><span class="o">=</span><span class="p">&lcub;&lcub;</span> <span class="nx">height</span><span class="o">:</span> <span class="s1">'100vh'</span> <span class="p">&rcub;&rcub;</span>
+        <span class="nx">longitude</span><span class="o">=</span><span class="p">&lcub;</span><span class="o">-</span><span class="mf">73.597449290552</span><span class="p">&rcub;</span>
+        <span class="nx">latitude</span><span class="o">=</span><span class="p">&lcub;</span><span class="mf">45.498740109868166</span><span class="p">&rcub;</span>
+        <span class="nx">zoom</span><span class="o">=</span><span class="p">&lcub;</span><span class="mi">14</span><span class="p">&rcub;</span>
+        <span class="nx">accessToken</span><span class="o">=</span><span class="p">&lcub;</span><span class="nx">accessToken</span><span class="p">&rcub;</span>
+      <span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Marker</span> <span class="nx">longitude</span><span class="o">=</span><span class="p">&lcub;</span><span class="o">-</span><span class="mf">73.597449290552</span><span class="p">&rcub;</span> <span class="nx">latitude</span><span class="o">=</span><span class="p">&lcub;</span><span class="mf">45.498740109868166</span><span class="p">&rcub;</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span>/Map>
+    <span class="o">&lt;</span>/MapProvider>
+  <span class="p">)</span>
+<span class="p">&rcub;</span></code></pre>
+<h2 id="props">Props</h2>
+<h4 id="longitude_number"><code>longitude</code> number</h4>
+<p>The longitude of the marker.</p>
+<h4 id="latitude_number"><code>latitude</code> number</h4>
+<p>The latitude of the marker.</p>
+<h4 id="popup_reactelement_(optional)"><code>popup</code> ReactElement <em>(optional)</em></h4>
+<p>An optional popup to appear when the marker is clicked on.</p>
+<h4 id="closeonclick_boolean_(optional)"><code>closeOnClick</code> boolean <em>(optional)</em></h4>
+<p>Whether the popup (if there is one) will close if clicked on.</p>
+<h4 id="anchor_string_(optional)"><code>anchor</code> string <em>(optional)</em></h4>
+<p>Indicates which part of the marker should be positioned at the coordinates. The choices are <code>center</code>, <code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>, <code>top-left</code>, <code>top-right</code>, <code>bottom-left</code>, and <code>bottom-right</code>. </p>
+<h4 id="color_string_(optional)"><code>color</code> string <em>(optional)</em></h4>
+<p>The marker color.</p>
+        </div>
+      </div>
+
+      <div class="column is-one-fifth">
+        <aside class="menu">
+            <p class="menu-label has-text-weight-bold">
+              Table of Contents
+            </p><ul class="menu-list">
+        <li><a href="#props">Props</a></li>
+            <li><ul class="menu-list">
+        <li><a href="#longitude_number"><code>longitude</code> number</a></li>
+        <li><a href="#latitude_number"><code>latitude</code> number</a></li>
+        <li><a href="#popup_reactelement_(optional)"><code>popup</code> ReactElement <em>(optional)</em></a></li>
+        <li><a href="#closeonclick_boolean_(optional)"><code>closeOnClick</code> boolean <em>(optional)</em></a></li>
+        <li><a href="#anchor_string_(optional)"><code>anchor</code> string <em>(optional)</em></a></li>
+        <li><a href="#color_string_(optional)"><code>color</code> string <em>(optional)</em></a></li></ul>
+</li></ul>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+
+    <footer class="footer pt-3 pb-3">
+      <div class="content has-text-centered">
+        <p>
+          &copy; 2022 <a href="https://github.com/vinctustech">Vinctus Technologies Inc.</a> All Rights Reserved.
+            The source code is licensed <a href="https://github.com/vinctustech/react-mapbox/blob/main/LICENSE">ISC</a>.
+        </p>
+        <p>
+          Documentation built with <a href="https://github.com/vinctustech/react-mapbox">Juicer</a>.
+        </p>
+        <p>
+          <a href="https://bulma.io">
+            <img
+                    src="https://bulma.io/images/made-with-bulma.png"
+                    alt="Made with Bulma"
+                    width="128"
+                    height="24">
+          </a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

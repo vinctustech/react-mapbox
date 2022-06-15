@@ -24,6 +24,5 @@ yarn-error.log*
 
 /.idea
 /dist
-/docs
 
 .npmrc

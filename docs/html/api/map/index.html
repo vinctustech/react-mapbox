@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>react-mapbox: A Minimalist Mapbox GL React.js Wrapper Library</title>
+    <link rel="stylesheet" href="/juicer/examples/docsrc/public/styles/bulma.min.css">
+    <link rel="stylesheet" href="/juicer/examples/docsrc/public/styles/footer.css">
+    <link rel="stylesheet" href="/juicer/examples/docsrc/public/styles/friendly.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/8a5bb05f66.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <nav class="navbar is-fixed-top is-light" role="navigation" aria-label="main navigation">
+
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" style="font-family:'Orbitron',sans-serif;font-size:130%"  href="/juicer/examples/docsrc/public">
+            react-mapbox
+          </a>
+          <a class="navbar-item"  href="/juicer/examples/docsrc/public/html/guide/installation">
+            Documentation
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="field is-grouped">
+              <p class="control">
+                <a class="bd-tw-button button" target="_blank" href="https://github.com/vinctustech/react-mapbox">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>GitHub</span>
+                </a>
+              </p>
+              <p class="control">
+                <a class="button is-primary" href="https://github.com/vinctustech/react-mapbox/archive/refs/tags/v0.1.0-beta.5.zip">
+              <span class="icon">
+                <i class="fas fa-download"></i>
+              </span>
+                  <span>Download</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    
+  <section class="section">
+    <div class="columns">
+      <div class="column is-2 is-offset-1">
+        <aside class="menu">
+              <p class="menu-label">
+                Developer Guide
+              </p>
+              <ul class="menu-list">
+                  <li><a href="/juicer/examples/docsrc/public/html/guide/installation">Getting Started</a></li>
+              </ul>
+              <p class="menu-label">
+                API Reference
+              </p>
+              <ul class="menu-list">
+                  <li><a href="/juicer/examples/docsrc/public/html/api/geolocate">GeolocateControl</a></li>
+                  <li><a href="/juicer/examples/docsrc/public/html/api/layer">Layer</a></li>
+                  <li><a href="/juicer/examples/docsrc/public/html/api/map">Map</a></li>
+                  <li><a href="/juicer/examples/docsrc/public/html/api/marker">Marker</a></li>
+                  <li><a href="/juicer/examples/docsrc/public/html/api/popup">Popup</a></li>
+                  <li><a href="/juicer/examples/docsrc/public/html/api/scale">ScaleControl</a></li>
+              </ul>
+        </aside>
+      </div>
+
+      <div class="column is-5">
+        <div class="content has-text-justified">
+          <h1 id="map">Map</h1>
+<p><em>Map</em> is the React component that wraps a Mapbox GL JS <a href="/juicer/examples/docsrc/public/https:/docs.mapbox.com/mapbox-gl-js/api/map">Map</a>.</p>
+<h2 id="map_object">Map Object</h2>
+<p>The <em>Map</em> object can be accessed via a <a href="/juicer/examples/docsrc/public/https:/reactjs.org/docs/refs-and-the-dom.html">React Ref</a> or the [useMap](api/usemap) hook. The Mapbox Map instance is returned in either case provided access to instance members.</p>
+<h2 id="props">Props</h2>
+<h3 id="general">General</h3>
+<h4 id="accesstoken_string"><code>accessToken</code> string</h4>
+<p>Mapbox access token.</p>
+<h4 id="fallback_reactnode_(optional)"><code>fallback</code> ReactNode <em>(optional)</em></h4>
+<p>Error boundary fallback. If no fallback is provided, <code>&lt;h1&gt;Sorry.. there was a map error&lt;/h1&gt;</code> is used instead.</p>
+<h4 id="id_string_(optional)"><code>id</code> string <em>(optional)</em></h4>
+<p>Map container id.</p>
+<h4 id="ref_refattributes&lt;mapboxgl.map_|_null&gt;_(optional)"><code>ref</code> RefAttributes<mapboxgl.Map | null> <em>(optional)</em></h4>
+<p>Forwarded ref.</p>
+<h3 id="layout">Layout</h3>
+<h4 id="style_cssproperties_(optional)"><code>style</code> CSSProperties <em>(optional)</em></h4>
+<p>Default: <code>{position: 'relative', width: '100%', height: '100%'}</code></p>
+<p>Map container CSS.</p>
+<h3 id="camera_props">Camera Props</h3>
+<h4 id="longitude_number"><code>longitude</code> number</h4>
+<p>Initial map center longitude.</p>
+<h4 id="latitude_number"><code>latitude</code> number</h4>
+<p>Initial map center longitude.</p>
+<h4 id="zoom_number"><code>zoom</code> number</h4>
+<p>Initial map zoom.</p>
+<h3 id="styling">Styling</h3>
+<h4 id="antialias_boolean_(optional)"><code>antialias</code> boolean <em>(optional)</em></h4>
+<p>Mapbox <a href="/juicer/examples/docsrc/public/https:/docs.mapbox.com/mapbox-gl-js/api/map">Map</a> <code>antialias</code> option.</p>
+<h4 id="logoposition_'top-left'_|_'top-right'_|_'bottom-left'_|_'bottom-right'_(optional)"><code>logoPosition</code> 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' <em>(optional)</em></h4>
+<p>Position of the Mapbox wordmark on the map.</p>
+<h4 id="maxpitch_number_(optional)"><code>maxPitch</code> number <em>(optional)</em></h4>
+<p>The pitch is disabled (zero value) by default.</p>
+<h4 id="mapstyle_string_(optional)"><code>mapStyle</code> string <em>(optional)</em></h4>
+<p>The current map style default is <code>mapbox://styles/mapbox/streets-v11</code>.</p>
+<h3 id="callbacks">Callbacks</h3>
+<h4 id="onload_(e:_import('mapbox-gl').mapboxevent)_=&gt;_void_(optional)"><code>onLoad</code> (e: import('mapbox-gl').MapboxEvent) => void <em>(optional)</em></h4>
+<p>Mapbox <code>map.on('load',...)</code> event callback.</p>
+<h4 id="ondragend_(e:_viewstatechangeevent)_=&gt;_void_(optional)"><code>onDragEnd</code> (e: ViewStateChangeEvent) => void <em>(optional)</em></h4>
+<p>Mapbox <code>map.on('dragend',...)</code> event callback.</p>
+<h4 id="onmoveend_(e:_viewstatechangeevent)_=&gt;_void_(optional)"><code>onMoveEnd</code> (e: ViewStateChangeEvent) => void <em>(optional)</em></h4>
+<p>Mapbox <code>map.on('moveend',...)</code> event callback.</p>
+<h4 id="onzoomend_(e:_viewstatechangeevent)_=&gt;_void_(optional)"><code>onZoomEnd</code> (e: ViewStateChangeEvent) => void <em>(optional)</em></h4>
+<p>Mapbox <code>map.on('zoomend',...)</code> event callback.</p>
+        </div>
+      </div>
+
+      <div class="column is-one-fifth">
+        <aside class="menu">
+            <p class="menu-label has-text-weight-bold">
+              Table of Contents
+            </p><ul class="menu-list">
+        <li><a href="#map_object">Map Object</a></li>
+        <li><a href="#props">Props</a></li>
+            <li><ul class="menu-list">
+        <li><a href="#general">General</a></li>
+            <li><ul class="menu-list">
+        <li><a href="#accesstoken_string"><code>accessToken</code> string</a></li>
+        <li><a href="#fallback_reactnode_(optional)"><code>fallback</code> ReactNode <em>(optional)</em></a></li>
+        <li><a href="#id_string_(optional)"><code>id</code> string <em>(optional)</em></a></li>
+        <li><a href="#ref_refattributes<mapboxgl.map_|_null>_(optional)"><code>ref</code> RefAttributes<mapboxgl.Map | null> <em>(optional)</em></a></li></ul>
+</li>
+        <li><a href="#layout">Layout</a></li>
+            <li><ul class="menu-list">
+        <li><a href="#style_cssproperties_(optional)"><code>style</code> CSSProperties <em>(optional)</em></a></li></ul>
+</li>
+        <li><a href="#camera_props">Camera Props</a></li>
+            <li><ul class="menu-list">
+        <li><a href="#longitude_number"><code>longitude</code> number</a></li>
+        <li><a href="#latitude_number"><code>latitude</code> number</a></li>
+        <li><a href="#zoom_number"><code>zoom</code> number</a></li></ul>
+</li>
+        <li><a href="#styling">Styling</a></li>
+            <li><ul class="menu-list">
+        <li><a href="#antialias_boolean_(optional)"><code>antialias</code> boolean <em>(optional)</em></a></li>
+        <li><a href="#logoposition_'top-left'_|_'top-right'_|_'bottom-left'_|_'bottom-right'_(optional)"><code>logoPosition</code> 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' <em>(optional)</em></a></li>
+        <li><a href="#maxpitch_number_(optional)"><code>maxPitch</code> number <em>(optional)</em></a></li>
+        <li><a href="#mapstyle_string_(optional)"><code>mapStyle</code> string <em>(optional)</em></a></li></ul>
+</li>
+        <li><a href="#callbacks">Callbacks</a></li>
+            <li><ul class="menu-list">
+        <li><a href="#onload_(e:_import('mapbox-gl').mapboxevent)_=>_void_(optional)"><code>onLoad</code> (e: import('mapbox-gl').MapboxEvent) => void <em>(optional)</em></a></li>
+        <li><a href="#ondragend_(e:_viewstatechangeevent)_=>_void_(optional)"><code>onDragEnd</code> (e: ViewStateChangeEvent) => void <em>(optional)</em></a></li>
+        <li><a href="#onmoveend_(e:_viewstatechangeevent)_=>_void_(optional)"><code>onMoveEnd</code> (e: ViewStateChangeEvent) => void <em>(optional)</em></a></li>
+        <li><a href="#onzoomend_(e:_viewstatechangeevent)_=>_void_(optional)"><code>onZoomEnd</code> (e: ViewStateChangeEvent) => void <em>(optional)</em></a></li></ul>
+</li></ul>
+</li></ul>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+
+    <footer class="footer pt-3 pb-3">
+      <div class="content has-text-centered">
+        <p>
+          &copy; 2022 <a href="https://github.com/vinctustech">Vinctus Technologies Inc.</a> All Rights Reserved.
+            The source code is licensed <a href="https://github.com/vinctustech/react-mapbox/blob/main/LICENSE">ISC</a>.
+        </p>
+        <p>
+          Documentation built with <a href="https://github.com/vinctustech/react-mapbox">Juicer</a>.
+        </p>
+        <p>
+          <a href="https://bulma.io">
+            <img
+                    src="https://bulma.io/images/made-with-bulma.png"
+                    alt="Made with Bulma"
+                    width="128"
+                    height="24">
+          </a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
