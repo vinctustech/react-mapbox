@@ -31,7 +31,7 @@ Props
 
 #### `position` 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left' *(optional)*
 
-The position on the map where the control will be added.
+The position on the map where the control will be added. Defaults to `top-right`.
 
 #### `showUserLocation` boolean *(optional)*
 
