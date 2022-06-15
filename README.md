@@ -1,7 +1,7 @@
 ## react-mapbox
 
 **react-mapbox** is a very minimalist React.js wrapper library for the 
-[mapbox-gl](https://docs.mapbox.com/mapbox-gl-js/guides/) 
+[Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/guides/) 
 Typescript library.
 
 Example
@@ -29,21 +29,3 @@ subsequent changes to library code, just refresh the browser.
 Here is how the test app should appear.
 
 ![](example.png)
-
-Making Changes
---------------
-
-Use the following steps to test and publish a new version of the 
-library.
-1. after coding the desired changes, add some code to the test app (in the 
-  `test` folder) to test the changes.
-1. type `tsc` (in the root of the repo) to compile the library to 
-  the `dist` folder.
-1. type `cd test` and then `npm start` to run the test app
-1. when ready to publish, return to the root of the repo, change the 
-  version number in the `package.json` (of the library, not of the test 
-  app)
-1. type `npm publish` to publish the contents of the `dist` folder 
-   (created in step 2) only. Specifically, we don't want the test app 
-   to be published as part of the library
-1. commit the changes
