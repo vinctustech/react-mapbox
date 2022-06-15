@@ -3,7 +3,7 @@ Popup
 
 A component that adds a [Popup](https://docs.mapbox.com/mapbox-gl-js/api/markers/#popup) to a map.
 
-TODO: example
+[//]: # (TODO: example)
 
 Props
 -----

@@ -3,6 +3,8 @@ Marker
 
 A component that adds a [Marker](https://docs.mapbox.com/mapbox-gl-js/api/markers/#marker) to a map. A simple marker with no child appears as a light blue droplet shaped SVG.  Otherwise, an arbitrary React element child can be used as the marker.
 
+[//]: # (TODO: tsx support)
+
 ```javascript
 import React, { FC } from 'react'
 import { Map, MapProvider, Marker } from '@vinctus/react-mapbox'

@@ -3,7 +3,7 @@ Layer
 
 A component that adds a [layer](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/) to a map.
 
-TODO: layer example
+[//]: # (TODO: example)
 
 Props
 -----

@@ -1,3 +1,5 @@
 ScaleControl
 ============
 
+
+[//]: # (TODO: example)
