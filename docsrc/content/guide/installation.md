@@ -36,3 +36,7 @@ ReactDOM.render(
     document.getElementById('root')
 )
 ```
+
+[= note =]
+Please note that `mapbox-gl/dist/mapbox-gl.css` must be imported.
+[= /note =]

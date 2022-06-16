@@ -21,7 +21,13 @@ export const App: FC = () => {
         zoom={14}
         accessToken={accessToken}
       >
-        <Marker longitude={-73.597449290552} latitude={45.498740109868166} />
+        <Marker longitude={-73.597449290552} latitude={45.498740109868166}>
+          <p>Custom Marker</p>
+          <svg style={{ marginLeft: 'auto', marginRight: 'auto' }} width="20" height="20">
+            <circle cx="10" cy="10" r="9" stroke="green" strokeWidth="2" fill="yellow" />
+            Sorry, your browser does not support inline SVG.
+          </svg>
+        </Marker>
       </Map>
     </MapProvider>
   )
