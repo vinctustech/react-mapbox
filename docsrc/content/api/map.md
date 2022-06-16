@@ -8,7 +8,7 @@ Map
 Map Object
 ----------
 
-The *Map* object can be accessed via a [React Ref](https://reactjs.org/docs/refs-and-the-dom.html) or the [useMap](api/usemap) hook. The Mapbox Map instance is returned in either case provided access to instance members.
+The *Map* object can be accessed via a [React Ref](https://reactjs.org/docs/refs-and-the-dom.html) or the [useMap](html/api/usemap) hook. The Mapbox Map instance is returned in either case provided access to instance members.
 
 Props
 -----
