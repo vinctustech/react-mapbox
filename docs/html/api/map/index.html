@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>react-mapbox: A Minimalist Mapbox GL JS React.js Wrapper Library</title>
-    <link rel="stylesheet" href="/react-mapbox/styles/bulma.min.css">
-    <link rel="stylesheet" href="/react-mapbox/styles/footer.css">
-    <link rel="stylesheet" href="/react-mapbox/styles/friendly.css">
+    <title>react-mapbox: A Minimalist Mapbox GL React.js Wrapper Library</title>
+    <link rel="stylesheet" href="/juicer/examples/react-mapbox-docs/public/styles/bulma.min.css">
+    <link rel="stylesheet" href="/juicer/examples/react-mapbox-docs/public/styles/footer.css">
+    <link rel="stylesheet" href="/juicer/examples/react-mapbox-docs/public/styles/friendly.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,10 +21,10 @@
 
       <div class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item" style="font-family:'Orbitron',sans-serif;font-size:130%"  href="https://vinctustech.github.io/react-mapbox/">
+          <a class="navbar-item" style="font-family:'Orbitron',sans-serif;font-size:130%"  href="/juicer/examples/react-mapbox-docs/public">
             react-mapbox
           </a>
-          <a class="navbar-item"  href="/react-mapbox/html/guide/installation">
+          <a class="navbar-item"  href="/juicer/examples/react-mapbox-docs/public/html/guide/installation">
             Documentation
           </a>
         </div>
@@ -63,18 +63,20 @@
                 Developer Guide
               </p>
               <ul class="menu-list">
-                  <li><a href="/react-mapbox/html/guide/installation">Getting Started</a></li>
+                  <li><a href="/juicer/examples/react-mapbox-docs/public/html/guide/installation">Getting Started</a></li>
               </ul>
               <p class="menu-label">
                 API Reference
               </p>
               <ul class="menu-list">
-                  <li><a href="/react-mapbox/html/api/geolocate">GeolocateControl</a></li>
-                  <li><a href="/react-mapbox/html/api/layer">Layer</a></li>
-                  <li><a href="/react-mapbox/html/api/map">Map</a></li>
-                  <li><a href="/react-mapbox/html/api/marker">Marker</a></li>
-                  <li><a href="/react-mapbox/html/api/popup">Popup</a></li>
-                  <li><a href="/react-mapbox/html/api/scale">ScaleControl</a></li>
+                  <li><a href="/juicer/examples/react-mapbox-docs/public/html/api/geolocate">GeolocateControl</a></li>
+                  <li><a href="/juicer/examples/react-mapbox-docs/public/html/api/layer">Layer</a></li>
+                  <li><a href="/juicer/examples/react-mapbox-docs/public/html/api/map">Map</a></li>
+                  <li><a href="/juicer/examples/react-mapbox-docs/public/html/api/mapprovider">MapProvider</a></li>
+                  <li><a href="/juicer/examples/react-mapbox-docs/public/html/api/marker">Marker</a></li>
+                  <li><a href="/juicer/examples/react-mapbox-docs/public/html/api/popup">Popup</a></li>
+                  <li><a href="/juicer/examples/react-mapbox-docs/public/html/api/scale">ScaleControl</a></li>
+                  <li><a href="/juicer/examples/react-mapbox-docs/public/html/api/usemap">useMap</a></li>
               </ul>
         </aside>
       </div>
@@ -82,9 +84,9 @@
       <div class="column is-5">
         <div class="content has-text-justified">
           <h1 id="map">Map</h1>
-<p><em>Map</em> is the React component that wraps a Mapbox GL JS <a href="/react-mapbox/https:/docs.mapbox.com/mapbox-gl-js/api/map">Map</a>.</p>
+<p><em>Map</em> is the React component that wraps a Mapbox GL JS <a href="/juicer/examples/react-mapbox-docs/public/https:/docs.mapbox.com/mapbox-gl-js/api/map">Map</a>.</p>
 <h2 id="map_object">Map Object</h2>
-<p>The <em>Map</em> object can be accessed via a <a href="/react-mapbox/https:/reactjs.org/docs/refs-and-the-dom.html">React Ref</a> or the [useMap](api/usemap) hook. The Mapbox Map instance is returned in either case provided access to instance members.</p>
+<p>The <em>Map</em> object can be accessed via a <a href="/juicer/examples/react-mapbox-docs/public/https:/reactjs.org/docs/refs-and-the-dom.html">React Ref</a> or the [useMap](html/api/usemap) hook. The Mapbox Map instance is returned in either case provided access to instance members.</p>
 <h2 id="props">Props</h2>
 <h3 id="general">General</h3>
 <h4 id="accesstoken_string"><code>accessToken</code> string</h4>
@@ -108,7 +110,7 @@
 <p>Initial map zoom.</p>
 <h3 id="styling">Styling</h3>
 <h4 id="antialias_boolean_(optional)"><code>antialias</code> boolean <em>(optional)</em></h4>
-<p>Mapbox <a href="/react-mapbox/https:/docs.mapbox.com/mapbox-gl-js/api/map">Map</a> <code>antialias</code> option.</p>
+<p>Mapbox <a href="/juicer/examples/react-mapbox-docs/public/https:/docs.mapbox.com/mapbox-gl-js/api/map">Map</a> <code>antialias</code> option.</p>
 <h4 id="logoposition_'top-left'_|_'top-right'_|_'bottom-left'_|_'bottom-right'_(optional)"><code>logoPosition</code> 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' <em>(optional)</em></h4>
 <p>Position of the Mapbox wordmark on the map.</p>
 <h4 id="maxpitch_number_(optional)"><code>maxPitch</code> number <em>(optional)</em></h4>

@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>react-mapbox: A Minimalist Mapbox GL JS React.js Wrapper Library</title>
-    <link rel="stylesheet" href="/react-mapbox/styles/bulma.min.css">
-    <link rel="stylesheet" href="/react-mapbox/styles/footer.css">
-    <link rel="stylesheet" href="/react-mapbox/styles/friendly.css">
+    <title>react-mapbox: A Minimalist Mapbox GL React.js Wrapper Library</title>
+    <link rel="stylesheet" href="/juicer/examples/react-mapbox-docs/public/styles/bulma.min.css">
+    <link rel="stylesheet" href="/juicer/examples/react-mapbox-docs/public/styles/footer.css">
+    <link rel="stylesheet" href="/juicer/examples/react-mapbox-docs/public/styles/friendly.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,10 +21,10 @@
 
       <div class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item" style="font-family:'Orbitron',sans-serif;font-size:130%"  href="https://vinctustech.github.io/react-mapbox/">
+          <a class="navbar-item" style="font-family:'Orbitron',sans-serif;font-size:130%"  href="/juicer/examples/react-mapbox-docs/public">
             react-mapbox
           </a>
-          <a class="navbar-item"  href="/react-mapbox/html/guide/installation">
+          <a class="navbar-item"  href="/juicer/examples/react-mapbox-docs/public/html/guide/installation">
             Documentation
           </a>
         </div>
@@ -63,18 +63,20 @@
                 Developer Guide
               </p>
               <ul class="menu-list">
-                  <li><a href="/react-mapbox/html/guide/installation">Getting Started</a></li>
+                  <li><a href="/juicer/examples/react-mapbox-docs/public/html/guide/installation">Getting Started</a></li>
               </ul>
               <p class="menu-label">
                 API Reference
               </p>
               <ul class="menu-list">
-                  <li><a href="/react-mapbox/html/api/geolocate">GeolocateControl</a></li>
-                  <li><a href="/react-mapbox/html/api/layer">Layer</a></li>
-                  <li><a href="/react-mapbox/html/api/map">Map</a></li>
-                  <li><a href="/react-mapbox/html/api/marker">Marker</a></li>
-                  <li><a href="/react-mapbox/html/api/popup">Popup</a></li>
-                  <li><a href="/react-mapbox/html/api/scale">ScaleControl</a></li>
+                  <li><a href="/juicer/examples/react-mapbox-docs/public/html/api/geolocate">GeolocateControl</a></li>
+                  <li><a href="/juicer/examples/react-mapbox-docs/public/html/api/layer">Layer</a></li>
+                  <li><a href="/juicer/examples/react-mapbox-docs/public/html/api/map">Map</a></li>
+                  <li><a href="/juicer/examples/react-mapbox-docs/public/html/api/mapprovider">MapProvider</a></li>
+                  <li><a href="/juicer/examples/react-mapbox-docs/public/html/api/marker">Marker</a></li>
+                  <li><a href="/juicer/examples/react-mapbox-docs/public/html/api/popup">Popup</a></li>
+                  <li><a href="/juicer/examples/react-mapbox-docs/public/html/api/scale">ScaleControl</a></li>
+                  <li><a href="/juicer/examples/react-mapbox-docs/public/html/api/usemap">useMap</a></li>
               </ul>
         </aside>
       </div>
@@ -83,7 +85,7 @@
         <div class="content has-text-justified">
           <h1 id="getting_started">Getting Started</h1>
 <h2 id="installation">Installation</h2>
-<p>Using <em>react-mapbox</em> requires <a href="/react-mapbox/https:/reactjs.org">React.js</a> >= 17.  The [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/guides/) library must also be installed.</p>
+<p>Using <em>react-mapbox</em> requires <a href="/juicer/examples/react-mapbox-docs/public/https:/reactjs.org">React.js</a> >= 17.  The [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/guides/) library must also be installed.</p>
 <pre><code>npm install mapbox-gl @vinctus/react-mapbox
 </code></pre>
 <h2 id="example">Example</h2>
@@ -104,46 +106,13 @@
           <span class="nx">latitude</span><span class="o">=</span><span class="p">&lcub;</span><span class="mf">45.498740109868166</span><span class="p">&rcub;</span>
           <span class="nx">zoom</span><span class="o">=</span><span class="p">&lcub;</span><span class="mi">14</span><span class="p">&rcub;</span>
           <span class="nx">accessToken</span><span class="o">=</span><span class="p">&lcub;</span><span class="nx">accessToken</span><span class="p">&rcub;</span>
-        <span class="o">/&gt;</span>
+        <span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="nx">Marker</span> <span class="nx">longitude</span><span class="o">=</span><span class="p">&lcub;</span><span class="o">-</span><span class="mf">73.597449290552</span><span class="p">&rcub;</span> <span class="nx">latitude</span><span class="o">=</span><span class="p">&lcub;</span><span class="mf">45.498740109868166</span><span class="p">&rcub;</span> <span class="o">/&gt;</span>
+        <span class="o">&lt;</span>/Map>
       <span class="o">&lt;</span>/MapProvider>
     <span class="o">&lt;</span>/React.StrictMode>,
     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'root'</span><span class="p">)</span>
 <span class="p">)</span></code></pre>
-<h2 id="making_changes">Making Changes</h2>
-<p>Use the following steps to test and publish a new version of the
-library.</p>
-<ol>
-<li>after coding the desired changes, add some code to the test app (in the
-<code>test</code> folder) to test the changes.</li>
-<li>type <code>tsc</code> (in the root of the repo) to compile the library to
-the <code>dist</code> folder.</li>
-<li>type <code>cd test</code> and then <code>npm start</code> to run the test app</li>
-<li>when ready to publish, return to the root of the repo, change the
-version number in the <code>package.json</code> (of the library, not of the test
-app)</li>
-<li>type <code>npm publish</code> to publish the contents of the <code>dist</code> folder
-(created in step 2) only. Specifically, we don't want the test app
-to be published as part of the library</li>
-<li>commit the changes</li>
-</ol>
-<h2 id="testing">Testing</h2>
-<p>There is a folder called <code>test</code> which contains a very simple test
-application, which also serves as an example of how to use the library.
-The <code>package.json</code> (of the test app) causes symlinks to be created for
-the react dependencies and the <code>react-mapbox</code> library itself. This
-means that the test application can be used to test changes to the
-library immediately without having to do <code>npm publish</code> or <code>npm pack</code>,
-and then <code>npm install</code> over and over. <code>npm install</code> only needs to be
-typed once for it to work. The test app exercises many of
-the features of the library in a very simple way. Here is a screenshot.</p>
-<p>For the test app to work, you need to create a <code>.env</code> file in the
-<code>test</code> folder with your Mapbox API key as follows:</p>
-<pre><code>REACT_APP_MAPBOX_API_KEY=&lt;Mapbox API key&gt;
-</code></pre>
-<p>You also need to type <code>npm i</code> just once in the <code>test</code> folder. For
-subsequent changes to library code, just refresh the browser.</p>
-<p>Here is how the test app should appear.</p>
-<p><img src="/react-mapbox/images/example.png"></img></p>
         </div>
       </div>
 
@@ -153,9 +122,7 @@ subsequent changes to library code, just refresh the browser.</p>
               Table of Contents
             </p><ul class="menu-list">
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#example">Example</a></li>
-        <li><a href="#making_changes">Making Changes</a></li>
-        <li><a href="#testing">Testing</a></li></ul>
+        <li><a href="#example">Example</a></li></ul>
 
         </aside>
       </div>
