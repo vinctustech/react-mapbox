@@ -13,8 +13,6 @@ npm install mapbox-gl @vinctus/react-mapbox
 Example
 -------
 
-Here's a basic example.
-
 ```javascript
 import React, { FC } from 'react'
 import ReactDOM from 'react-dom'
@@ -32,9 +30,7 @@ ReactDOM.render(
           latitude={45.498740109868166}
           zoom={14}
           accessToken={accessToken}
-        >
-          <Marker longitude={-73.597449290552} latitude={45.498740109868166} />
-        </Map>
+        />
       </MapProvider>
     </React.StrictMode>,
     document.getElementById('root')
