@@ -39,7 +39,7 @@ Default: `{position: 'relative', width: '100%', height: '100%'}`
 
 Map container CSS.
 
-### Camera Props
+### Camera
 
 #### `longitude` number
 
@@ -71,7 +71,7 @@ The pitch is disabled (zero value) by default.
 
 The current map style default is `mapbox://styles/mapbox/streets-v11`.
 
-### Callbacks
+### Events
 
 #### `onLoad` (e: import('mapbox-gl').MapboxEvent) => void *(optional)*
 
