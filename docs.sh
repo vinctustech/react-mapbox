@@ -1,1 +1,1 @@
-rsync -av --progress examples/docsrc/public/. ~/dev/react-mapbox/docs
+rsync -av --progress examples/react-mapbox-docs/public/. ~/dev/react-mapbox/docs
