@@ -85,6 +85,28 @@
         <div class="content has-text-justified">
           <h1 id="popup">Popup</h1>
 <p>A component that adds a <a href="/react-mapbox/https:/docs.mapbox.com/mapbox-gl-js/api/markers/#popup">Popup</a> to a map.</p>
+<pre class="highlight"><code class="language-javascript"><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">&lcub;</span> <span class="nx">FC</span> <span class="p">&rcub;</span> <span class="nx">from</span> <span class="s1">'react'</span>
+<span class="kr">import</span> <span class="p">&lcub;</span> <span class="nx">Map</span><span class="p">,</span> <span class="nx">MapProvider</span><span class="p">,</span> <span class="nx">Popup</span> <span class="p">&rcub;</span> <span class="nx">from</span> <span class="s1">'@vinctus/react-mapbox'</span>
+
+<span class="kr">const</span> <span class="nx">accessToken</span> <span class="o">=</span> <span class="s1">'&lt;Mapbox access token&gt;'</span>
+
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">App</span><span class="o">:</span> <span class="nx">FC</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">&lcub;</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">MapProvider</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Map</span>
+        <span class="nx">style</span><span class="o">=</span><span class="p">&lcub;&lcub;</span> <span class="nx">height</span><span class="o">:</span> <span class="s1">'100vh'</span> <span class="p">&rcub;&rcub;</span>
+        <span class="nx">longitude</span><span class="o">=</span><span class="p">&lcub;</span><span class="o">-</span><span class="mf">73.597449290552</span><span class="p">&rcub;</span>
+        <span class="nx">latitude</span><span class="o">=</span><span class="p">&lcub;</span><span class="mf">45.498740109868166</span><span class="p">&rcub;</span>
+        <span class="nx">zoom</span><span class="o">=</span><span class="p">&lcub;</span><span class="mi">14</span><span class="p">&rcub;</span>
+        <span class="nx">accessToken</span><span class="o">=</span><span class="p">&lcub;</span><span class="nx">accessToken</span><span class="p">&rcub;</span>
+      <span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Popup</span> <span class="nx">longitude</span><span class="o">=</span><span class="p">&lcub;</span><span class="o">-</span><span class="mf">73.597449290552</span><span class="p">&rcub;</span> <span class="nx">latitude</span><span class="o">=</span><span class="p">&lcub;</span><span class="mf">45.498740109868166</span><span class="p">&rcub;</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Beaver</span> <span class="nx">Lake</span><span class="o">&lt;</span>/div>
+        <span class="o">&lt;</span>/Popup>
+      <span class="o">&lt;</span>/Map>
+    <span class="o">&lt;</span>/MapProvider>
+  <span class="p">)</span>
+<span class="p">&rcub;</span></code></pre>
 <h2 id="props">Props</h2>
 <h4 id="longitude_number"><code>longitude</code> number</h4>
 <p>The longitude of the popup.</p>

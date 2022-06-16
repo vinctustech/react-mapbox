@@ -85,6 +85,24 @@
         <div class="content has-text-justified">
           <h1 id="map">Map</h1>
 <p><em>Map</em> is the React component that wraps a Mapbox GL JS <a href="/react-mapbox/https:/docs.mapbox.com/mapbox-gl-js/api/map">Map</a>.</p>
+<pre class="highlight"><code class="language-javascript"><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">&lcub;</span> <span class="nx">FC</span> <span class="p">&rcub;</span> <span class="nx">from</span> <span class="s1">'react'</span>
+<span class="kr">import</span> <span class="p">&lcub;</span> <span class="nx">Map</span><span class="p">,</span> <span class="nx">MapProvider</span><span class="p">,</span> <span class="nx">Marker</span><span class="p">,</span> <span class="nx">GeolocateControl</span> <span class="p">&rcub;</span> <span class="nx">from</span> <span class="s1">'@vinctus/react-mapbox'</span>
+
+<span class="kr">const</span> <span class="nx">accessToken</span> <span class="o">=</span> <span class="s1">'&lt;Mapbox access token&gt;'</span>
+
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">App</span><span class="o">:</span> <span class="nx">FC</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">&lcub;</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">MapProvider</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Map</span>
+        <span class="nx">style</span><span class="o">=</span><span class="p">&lcub;&lcub;</span> <span class="nx">height</span><span class="o">:</span> <span class="s1">'100vh'</span> <span class="p">&rcub;&rcub;</span>
+        <span class="nx">longitude</span><span class="o">=</span><span class="p">&lcub;</span><span class="o">-</span><span class="mf">73.597449290552</span><span class="p">&rcub;</span>
+        <span class="nx">latitude</span><span class="o">=</span><span class="p">&lcub;</span><span class="mf">45.498740109868166</span><span class="p">&rcub;</span>
+        <span class="nx">zoom</span><span class="o">=</span><span class="p">&lcub;</span><span class="mi">14</span><span class="p">&rcub;</span>
+        <span class="nx">accessToken</span><span class="o">=</span><span class="p">&lcub;</span><span class="nx">accessToken</span><span class="p">&rcub;</span>
+      <span class="o">/&gt;</span>
+    <span class="o">&lt;</span>/MapProvider>
+  <span class="p">)</span>
+<span class="p">&rcub;</span></code></pre>
 <h2 id="map_object">Map Object</h2>
 <p>The <em>Map</em> object can be accessed via a <a href="/react-mapbox/https:/reactjs.org/docs/refs-and-the-dom.html">React Ref</a> or the [useMap](html/api/usemap) hook. The Mapbox Map instance is returned in either case provided access to instance members.</p>
 <h2 id="props">Props</h2>
