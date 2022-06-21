@@ -65,7 +65,7 @@ export const viewStateFromMap = (map: mapboxgl.Map) => ({
 
 export const useMap = () => useContext(MapContext)
 
-export const MapProvider: FC = ({ children }) => {
+export const MapProvider: FC<{ children?: ReactNode }> = ({ children }) => {
   const [map, setMap] = useState<mapboxgl.Map | null>(null)
   const [mapLoaded, setMapLoaded] = useState(false)
 
