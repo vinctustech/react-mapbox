@@ -1,4 +1,4 @@
-import { FC, useRef, useState } from 'react'
+import { FC, ReactNode, useRef, useState } from 'react'
 import {
   Map,
   Marker,
@@ -98,7 +98,7 @@ export const Home: FC = () => {
                       }))
                     }}
                   >
-                    {error && {}}
+                    {error && ({} as ReactNode)}
                     <GeolocateControl position="bottom-right" showUserLocation={false} />
                     <ScaleControl position="bottom-right" />
                     {marker && (

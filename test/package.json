@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@edadma/react-tailwind": "^0.1.0-pre.34",
+    "@edadma/react-tailwind": "^0.1.0-pre.38",
     "@vinctus/react-mapbox": "file:..",
     "react": "file:../node_modules/react",
     "react-dom": "file:../node_modules/react-dom",

@@ -1,6 +1,6 @@
 {
   "name": "@vinctus/react-mapbox",
-  "version": "0.1.0-beta.5",
+  "version": "0.1.0-beta.6",
   "description": "Minimalist Mapbox GL JS React.js wrapper library",
   "types": "dist/index.d.ts",
   "publishConfig": {
@@ -18,14 +18,14 @@
   },
   "peerDependencies": {
     "mapbox-gl": "^2.8.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/mapbox-gl": "^2.7.2",
     "@types/node": "^16.11.17",
-    "@types/react": "^17.0.38",
-    "@types/react-dom": "^17.0.11",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
     "typescript": "^4.7.2"
   },
   "scripts": {
