@@ -11,6 +11,7 @@ export type MarkerProps = {
   closeOnClick?: boolean
   anchor?: Anchor
   color?: string
+  children?: ReactNode
 }
 
 export const Marker: FC<MarkerProps> = ({
